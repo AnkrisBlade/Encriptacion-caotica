@@ -18,6 +18,7 @@
 {% endblock %}
 
 {% block content %}
+<div class="content-keys">
         <div>
             <label for="keys">Posee la clave pública y privada </label><select id="keys" name="keys" onchange="showHideKey()">
                 <option value="si">Si</option>
@@ -26,7 +27,7 @@
             <br><br>
         </div>
 
-    <div id="genera_keys" style="display: none">
+    <div class="genera_keys" id="genera_keys" style="display: none">
         <fieldset>
             <p>Generación de claves:</p>
             <ul>
@@ -35,14 +36,16 @@
             </ul>
         </fieldset>
     </div>
-
-    <form method=post enctype=multipart/form-data>
-        <fieldset id="inserta_keys" style="display: block">
-            <label for="public_key">Introduzca la clave pública: </label><input type="text" id="public_key" name="public">
-            <br><br>
-            <label for="private_key">Introduzca la clave privada: </label><input type="text" id="private_key" name="private">
-        </fieldset>
-        <br>
-        <input type=submit value=Guardar>
-    </form>
+    <div class="form">
+        <form method=post enctype=multipart/form-data>
+            <fieldset id="inserta_keys" style="display: block">
+                <label for="public_key">Introduzca la clave pública: </label><input type="text" id="public_key" name="public">
+                <br><br>
+                <label for="private_key">Introduzca la clave privada: </label><input type="text" id="private_key" name="private">
+            </fieldset>
+            <br>
+            <input type=submit value=Guardar>
+        </form>
+    </div>
+</div>
 {% endblock %}

@@ -82,3 +82,9 @@ p{
 .cambiar{
     text-align: center;
 }
+
+.content-keys{
+    display: grid;
+    justify-content: center;
+    margin: 50px;
+}
