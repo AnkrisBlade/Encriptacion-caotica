@@ -7,19 +7,24 @@
 {% endblock %}
 
 {% block content %}
-     <div>
+<div class="content-encriptar">
+    <div class="title">
+        <h1>Encriptar imagen</h1>
+    </div>
+    <div class="claves">
         <p>Claves a emplear:</p>
         <ul>
             <li>Clave pública: {{ public_key }}</li>
             <li>Clave privada: {{ private_key }}</li>
-        </ul>
+    </ul>
     </div>
-
-    <form method=post enctype=multipart/form-data>
-        <div>
-            <label for="image">Seleccione la imagen:</label> <input type=file id="image" name=file><br><br>
-        </div>
-
-        <input type=submit value=Upload>
+    <div class="form">
+        <form method=post enctype=multipart/form-data>
+            <div>
+                <label for="image">Seleccione la imagen:</label> <input type=file id="image" name=file><br><br>
+            </div>
+            <input type=submit value=Upload>
     </form>
+    </div>
+</div>
 {% endblock %}

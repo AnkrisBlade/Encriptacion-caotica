@@ -20,18 +20,24 @@
 {% endblock %}
 
 {% block content %}
-     <div id="no" style="display: block">
-        <p>Claves a emplear:</p>
-        <ul>
-            <li>Clave pública: {{ public_key }}</li>
-            <li>Clave privada: {{ private_key }}</li>
-        </ul>
+<div class="content-encriptar">
+    <div class="title">
+        <h1>Desencriptar imagen</h1>
     </div>
+    <div class="claves">
+        <div id="no" style="display: block">
+        
+            <p>Claves a emplear:</p>
+            <ul>
+                <li>Clave pública: {{ public_key }}</li>
+                <li>Clave privada: {{ private_key }}</li>
+            </ul>
+        </div>
 
-    <div>
-        <p><a href="/Keys"> ¿Quiere cambiar las claves?</a></p>
+        <div>
+            <p><a href="/Keys"> ¿Quiere cambiar las claves?</a></p>
+        </div>
     </div>
-
     <div>
         <label for="keys">¿Quiere cambiar la imagen? </label><select id="imagen" name="imagen" onchange="showHideImage()">
             <option value="si">Si</option>
@@ -45,10 +51,11 @@
          {{ image }}
     </div>
 
-    <form method=post enctype=multipart/form-data>
+    <form method="post" enctype="multipart/form-data">
         <div id="si2" style="display: none">
             <label for="image">Seleccione la imagen:</label> <input type=file id="image" name=file><br><br>
             <input type=submit value=Cargar>
         </div>
     </form>
+</div>
 {% endblock %}
