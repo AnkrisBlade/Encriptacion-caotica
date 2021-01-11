@@ -12,7 +12,6 @@
         <h1>Encriptar imagen</h1>
     </div>
     <div class="claves">
-        <p>Claves a emplear:</p>
         <ul>
             <li>Clave pública: {{ public_key }}</li>
             <li>Clave privada: {{ private_key }}</li>
@@ -20,10 +19,12 @@
     </div>
     <div class="form">
         <form method=post enctype=multipart/form-data>
-            <div>
+            <div class="label-form">
                 <label for="image">Seleccione la imagen:</label> <input type=file id="image" name=file><br><br>
             </div>
-            <input type=submit value=Upload>
+            <div class="btn-form">
+                <input type=submit value=Upload>
+            </div>
     </form>
     </div>
 </div>
